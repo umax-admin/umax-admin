@@ -10,12 +10,13 @@ export default defineConfig({
     },
     base: "/umax-admin/",
     publicPath: "/umax-admin/",
+    hash: true,
     access: {},
     model: {},
     initialState: {},
     request: {},
     layout: {
-        title: 'My Admin',
+        title: 'Umax Admin',
     },
     headScripts: [
         "https://gw.alipayobjects.com/os/lib/react/18.1.0/umd/react.production.min.js",
