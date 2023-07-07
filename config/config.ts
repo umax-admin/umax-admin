@@ -8,9 +8,13 @@ export default defineConfig({
         },
         // dark: true,
     },
+    exportStatic: {
+        extraRoutePaths: [{ path: '/', prerender: false }],
+
+    },
     base: "/umax-admin/",
     publicPath: "/umax-admin/",
-    hash: true,
+    // hash: true,
     access: {},
     model: {},
     initialState: {},
