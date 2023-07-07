@@ -1,3 +1,3 @@
-# README
+# umax-admin
 
-`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://umijs.org/docs/max/introduce)
+> 基于 umi4 antd design 开源后台管理系统
