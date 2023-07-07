@@ -9,7 +9,7 @@ export default defineConfig({
         // dark: true,
     },
     exportStatic: {
-        extraRoutePaths: [{ path: '/', prerender: false }],
+
 
     },
     base: "/umax-admin/",
