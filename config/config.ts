@@ -29,11 +29,7 @@ export default defineConfig({
             path: '/home',
             component: '/Home',
         },
-        {
-            name: '权限演示',
-            path: '/access',
-            component: 'Access',
-        },
+
         {
             name: '登录',
             path: '/login',
