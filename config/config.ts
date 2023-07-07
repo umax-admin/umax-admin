@@ -8,6 +8,7 @@ export default defineConfig({
         },
         // dark: true,
     },
+    base: "https://goofish-shop.github.io/umax-admin/",
     access: {},
     model: {},
     initialState: {},
