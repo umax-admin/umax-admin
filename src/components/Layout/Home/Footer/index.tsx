@@ -1,12 +1,42 @@
-import React from 'react'
+import { GithubOutlined } from '@ant-design/icons';
+import { DefaultFooter } from '@ant-design/pro-components';
+// import { useIntl } from '@umijs/max';
+import React from 'react';
 
-// 这是底部组件
-const Footer:React.FC =()=>{
+const Footer: React.FC = () => {
+//   const intl = useIntl();
+  const defaultMessage = "goofish-shop 出品"
 
-    return <>
-        这是底部
-    </>
-}
+  const currentYear = new Date().getFullYear();
 
+  return (
+    <DefaultFooter
+      style={{
+        background: 'none',
+      }}
+      copyright={`${currentYear} ${defaultMessage}`}
+      links={[
+        {
+          key: 'Umax Admin ',
+          title: 'Umax Admin',
+          href: 'https://goofish-shop.github.io/umax-admin/',
+          blankTarget: true,
+        },
+        {
+          key: 'github',
+          title: <GithubOutlined />,
+          href: 'https://goofish-shop.github.io/umax-admin/',
+          blankTarget: true,
+        },
+        {
+          key: 'ahKevinXy',
+          title: 'ahKevinXy',
+          href: 'https://ahkevinxy.github.io/',
+          blankTarget: true,
+        },
+      ]}
+    />
+  );
+};
 
-export default Footer
+export default Footer;

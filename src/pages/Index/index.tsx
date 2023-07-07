@@ -5,7 +5,11 @@ import { PageContainer,WaterMark ,ProCard} from '@ant-design/pro-components';
 
 import{Button,Statistic} from 'antd'
 
-import {Header} from '@/components/Layout/Home'
+
+import {
+    Footer,
+    Header
+} from '@/components/Layout/Home'
 const { Divider } = ProCard;
 
 const Index:React.FC =()=>{
@@ -27,19 +31,22 @@ const Index:React.FC =()=>{
         </ProCard>
         <Divider type={responsive ? 'horizontal' : 'vertical'} />
         <ProCard>
-          <Statistic title="冻结金额" value={112893.0} precision={2} />
+          <Statistic title="平均访问时间" value={112893.0} precision={2} />
         </ProCard>
         <Divider type={responsive ? 'horizontal' : 'vertical'} />
         <ProCard>
-          <Statistic title="信息完整度" value={93} suffix="/ 100" />
+          <Statistic title="留存率" value={93} suffix="/ 100" />
         </ProCard>
         <Divider type={responsive ? 'horizontal' : 'vertical'} />
         <ProCard>
-          <Statistic title="冻结金额" value={112893.0} />
+          <Statistic title="总统计" value={112893.0} />
         </ProCard>
       </ProCard.Group>
    
         </PageContainer>
+
+
+        <Footer></Footer>
     </WaterMark>
 }
 
