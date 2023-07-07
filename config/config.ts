@@ -8,7 +8,7 @@ export default defineConfig({
         },
         // dark: true,
     },
-    //base: "/umax-admin/",
+    base: "/umax-admin/",
     publicPath: "/umax-admin/",
     hash: true,
     access: {},
