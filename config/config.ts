@@ -9,6 +9,7 @@ export default defineConfig({
         // dark: true,
     },
     base: "/umax-admin/",
+    publicPath: "/umax-admin/",
     access: {},
     model: {},
     initialState: {},
@@ -16,6 +17,12 @@ export default defineConfig({
     layout: {
         title: 'My Admin',
     },
+    headScripts: [
+        "https://gw.alipayobjects.com/os/lib/react/18.1.0/umd/react.production.min.js",
+        "https://gw.alipayobjects.com/os/lib/react-dom/18.1.0/umd/react-dom.production.min.js",
+        "https://lib.baomitu.com/axios/0.27.2/axios.min.js",
+        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js",
+    ],
     routes: [
         {
             path: '/',
