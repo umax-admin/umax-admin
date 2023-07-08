@@ -1,4 +1,7 @@
-// 示例方法，没有实际意义
+/**
+ * 去除两边空格
+ * @param str
+ */
 export function trim(str: string) {
   return str.trim();
 }

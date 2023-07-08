@@ -26,7 +26,7 @@ const Login: React.FC = () => {
 
   return <>
  
-<LoginForm>
+        <LoginForm>
               <Tabs
                           activeKey={type}
                           onChange={setType}
@@ -44,7 +44,7 @@ const Login: React.FC = () => {
                         />
 
 
-{type === 'account' && (
+            {type === 'account' && (
             <>
               <ProFormText
                 name="username"

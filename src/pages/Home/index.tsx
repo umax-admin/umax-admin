@@ -5,13 +5,13 @@ import { useModel } from '@umijs/max';
 import styles from './index.less';
 
 const HomePage: React.FC = () => {
-  const { name } = useModel('global');
+
   return (
     <PageContainer ghost>
-      <div className={styles.container}>
-        <Guide name={trim(name)} />
-       这是首页
-      </div>
+
+
+        这是一个首页的页面
+
     </PageContainer>
   );
 };
