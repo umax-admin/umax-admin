@@ -8,7 +8,6 @@ export default defineConfig({
         },
         // dark: true,
     },
-
     exportStatic: {
 
 
@@ -23,7 +22,6 @@ export default defineConfig({
     layout: {
         title: 'Umax Admin',
     },
-
     routes: [
         //默认页面
         {
@@ -58,9 +56,9 @@ export default defineConfig({
     analytics: {
         ga_v2: 'G-RXDN42SD0T', // google analytics 的 key (GA 4)
     },
-    copy: ["README.md", "dist/"],
+    // copy: ["README.md", "dist/"],
     metas: [
-        { name: 'keywords', content: 'umi, umijs' },
+
         { name: 'description', content: '服务最好的闲鱼商铺' }
 
     ],
