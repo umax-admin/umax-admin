@@ -1,50 +1,51 @@
 import { useLocation, Outlet } from 'umi';
 import {
-  AlipayCircleOutlined,
+
   LockOutlined,
   MobileOutlined,
-  TaobaoCircleOutlined,
+
   UserOutlined,
-  WeiboCircleOutlined,
+
 } from '@ant-design/icons';
 import React, { useState } from 'react';
 import {
   LoginForm,
   ProFormCaptcha,
-  ProFormCheckbox,
+
   ProFormText,
 } from '@ant-design/pro-components';
-import { FormattedMessage, history, SelectLang, useIntl, useModel, Helmet } from '@umijs/max';
+import { FormattedMessage } from '@umijs/max';
+import { WaterMark } from '@ant-design/pro-components';
 
 import { Alert, message, Tabs } from 'antd';
+import {Footer} from "@/components/Layout/Home";
 
-
+// WaterMark
 
 const Login: React.FC = () => {
   const [type, setType] = useState<string>('account');
   
 
-  return <>
+  return <WaterMark content="goofish-shop/umax-admin">
  
         <LoginForm>
               <Tabs
-                          activeKey={type}
-                          onChange={setType}
-                          centered
-                          items={[
-                            {
-                              key: 'account',
-                              label:"账号"
-                            },
-                            {
-                              key: 'mobile',
-                              label:"手机号码"
-                            },
-                          ]}
-                        />
+                  activeKey={type}
+                  onChange={setType}
+                  centered
+                  items={[
+                    {
+                      key: 'account',
+                      label:"账号"
+                    },
+                    {
+                      key: 'mobile',
+                      label:"手机号码"
+                    },
+                  ]}
+                />
 
-
-            {type === 'account' && (
+        {type === 'account' && (
             <>
               <ProFormText
                 name="username"
@@ -52,7 +53,7 @@ const Login: React.FC = () => {
                   size: 'large',
                   prefix: <UserOutlined />,
                 }}
-                placeholder={"密码"}
+                placeholder={"用户名"}
                 rules={[
                   {
                     required: true,
@@ -88,7 +89,7 @@ const Login: React.FC = () => {
           )}
 
 
-{type === 'mobile' && (
+        {type === 'mobile' && (
             <>
               <ProFormText
                 fieldProps={{
@@ -157,11 +158,12 @@ const Login: React.FC = () => {
           )}
 
 
-</LoginForm>
+    </LoginForm>
  
 
+      <Footer/>
    
-  </>
+  </WaterMark>
 }
 
 
