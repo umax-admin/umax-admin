@@ -28,6 +28,4 @@ umi g page foo
 
 ```bash
     umi g page bar --dir 
-    
-    
 ```
