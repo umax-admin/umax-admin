@@ -187,6 +187,9 @@ export default () => {
                             float: 'right',
                             marginRight:'40px'
                         }}
+
+                        href={'/register'}
+
                     >
                         注册
                     </a>
@@ -194,6 +197,7 @@ export default () => {
                         style={{
                             float: 'right',
                         }}
+                        href={'/forget'}
                     >
                         忘记密码
                     </a>
