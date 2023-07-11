@@ -12,7 +12,7 @@ import {
     ProFormText,
     WaterMark
 } from '@ant-design/pro-components';
-import { Button, Divider, message, Space, Tabs } from 'antd';
+import {  Divider, message, Space, Tabs } from 'antd';
 import type { CSSProperties } from 'react';
 import { useState } from 'react';
 
@@ -44,7 +44,7 @@ export default () => {
                 title="UmaxAdmin"
                 subTitle="最好用的后台管理平台"
                 onFinish={(values)=>{
-
+                    console.log(values)
                     history.push('/')
 
                 }
@@ -182,6 +182,14 @@ export default () => {
                     <ProFormCheckbox noStyle name="autoLogin">
                         自动登录
                     </ProFormCheckbox>
+                    <a
+                        style={{
+                            float: 'right',
+                            marginRight:'40px'
+                        }}
+                    >
+                        注册
+                    </a>
                     <a
                         style={{
                             float: 'right',
