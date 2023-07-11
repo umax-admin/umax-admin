@@ -31,7 +31,7 @@ export default () => {
     const [loginType, setLoginType] = useState<LoginType>('phone');
     return (
         <WaterMark
-            content="goofish-shop/umax-admin"
+            content="umax-admin/umax-admin"
             style={{
                 display:'flex',
                 minHeight:'100vh',

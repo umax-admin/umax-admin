@@ -28,7 +28,7 @@ export async function getInitialState(): Promise<{
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
   return {
     waterMarkProps: {
-      content: "goofish-shop/umax-admin",
+      content: "umax-admin",
     },
    
     childrenRender: (children) => {

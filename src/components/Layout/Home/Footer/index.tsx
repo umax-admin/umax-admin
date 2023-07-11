@@ -5,7 +5,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
 //   const intl = useIntl();
-  const defaultMessage = "goofish-shop 出品"
+  const defaultMessage = "umax-admin 出品"
 
   const currentYear = new Date().getFullYear();
 
@@ -24,13 +24,13 @@ const Footer: React.FC = () => {
         {
           key: 'Umax Admin ',
           title: 'Umax Admin',
-          href: 'https://goofish-shop.github.io/umax-admin/',
+          href: 'https://umax-admin.github.io/umax-admin/',
           blankTarget: true,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://goofish-shop.github.io/umax-admin/',
+          href: 'https://umax-admin.github.io/umax-admin/',
           blankTarget: true,
         },
         {

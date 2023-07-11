@@ -16,7 +16,7 @@ const Index:React.FC =()=>{
     const [responsive, setResponsive] = useState(false);
 
     return <WaterMark
-        content="goofish-shop/umax-admin"
+        content="umax-admin"
         style={{
 
         }}
