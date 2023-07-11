@@ -116,7 +116,7 @@ export default () => {
                                 size: 'large',
                                 prefix: <LockOutlined className={'prefixIcon'} />,
                             }}
-                            placeholder={'密码: ant.design'}
+                            placeholder={'密码: 123456789'}
                             rules={[
                                 {
                                     required: true,
