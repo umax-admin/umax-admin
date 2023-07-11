@@ -40,7 +40,7 @@ export default () => {
         >
             <LoginFormPage
                 backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
-                logo="https://avatars.githubusercontent.com/u/111038345?s=200&v=4"
+                logo="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
                 title="UmaxAdmin"
                 subTitle="最好用的后台管理平台"
                 onFinish={(values)=>{
