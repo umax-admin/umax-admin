@@ -17,7 +17,7 @@ const Settings: ProLayoutProps & {
     colorWeak: false,
     title: 'Umax Admin',
     pwa: true,
-    logo: '/images/logo.png',
+    // logo: '/images/logo.png',
     // iconfontUrl: '/favicon.ico',
     token: {
         // 参见ts声明，demo 见文档，通过token 修改样式

@@ -20,7 +20,7 @@ export default defineConfig({
     initialState: {},
     request: {},
     layout: {
-        title: 'Umax Admin',
+        title: 'Umax',
     },
     routes: [
         //默认页面
@@ -47,6 +47,43 @@ export default defineConfig({
             name: '银行',
             path: '/bank',
             component: 'Bank'
+        },
+        {
+            name: '设置',
+            path: '/settings',
+            // component: 'Settings',
+            routes:[
+                {
+                    name:'用户设置',
+
+                    path:'/settings/user',
+                    component:"Settings/User",
+                },
+                {
+                    name:'角色设置',
+
+                    path:'/settings/role',
+                    component:"Settings/Role",
+                },
+                {
+                    name:'岗位设置',
+
+                    path:'/settings/position',
+                    component:"Settings/Position",
+                },
+                {
+                    name:'系统设置',
+
+                    path:'/settings/system',
+                    component:"Settings/System",
+                },
+                {
+                    name:'系统状态',
+
+                    path:'/settings/system_status',
+                    component:"Settings/SystemStatus",
+                }
+            ]
         },
 
 
