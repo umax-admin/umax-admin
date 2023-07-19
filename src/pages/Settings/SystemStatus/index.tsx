@@ -1,7 +1,8 @@
 import React from 'react';
+import {PageContainer} from "@ant-design/pro-components";
 
 const SystemStatus: React.FC = () => {
-  return <>系统状态</>;
+  return <PageContainer>系统状态</PageContainer>;
 };
 
 export default SystemStatus;

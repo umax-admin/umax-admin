@@ -7,7 +7,10 @@ export default defineConfig({
       locale: zhCN, // 配置中文
     },
     // dark: true,
+    // compact: true,
+    // dark: true,
   },
+  clientLoader: {},
   exportStatic: {},
   base: '/umax-admin/',
   publicPath: '/umax-admin/',
