@@ -1,42 +1,40 @@
 name: Deploy to Github Pages
 
 on:
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-            - name: Cache umax-admin resources
-              uses: actions/cache@v2
-              env:
-                  cache-name: umax-admin-resources
-              with:
-                  path: resources
-                  key: ${{ env.cache-name }}
+      - name: Cache umax-admin resources
+        uses: actions/cache@v2
+        env:
+          cache-name: umax-admin-resources
+        with:
+          path: resources
+          key: ${{ env.cache-name }}
 
-            - name: Use Node.js 16
-              uses: actions/setup-node@v3
-              with:
-                node-version: '16.x'
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
 
+      - name: Build
+        run: |
+          yarn
+          yarn  build
 
-
-            - name: Build
-              run: |
-                yarn
-                yarn  build
-
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4.4.2
-              with:
-                  branch: gh-pages
-                  folder: dist
-                  clean: true
-                  single-commit: true
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        with:
+          branch: gh-pages
+          folder: dist
+          clean: true
+          single-commit: true

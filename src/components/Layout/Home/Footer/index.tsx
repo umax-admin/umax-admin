@@ -4,8 +4,8 @@ import { DefaultFooter } from '@ant-design/pro-components';
 import React from 'react';
 
 const Footer: React.FC = () => {
-//   const intl = useIntl();
-  const defaultMessage = "umax-admin 出品"
+  //   const intl = useIntl();
+  const defaultMessage = 'umax-admin 出品';
 
   const currentYear = new Date().getFullYear();
 
@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
       style={{
         background: 'none',
 
-        textAlign:'center',
-        bottom:0,
-        flexShrink:'0',
-        marginTop:'auto'
+        textAlign: 'center',
+        bottom: 0,
+        flexShrink: '0',
+        marginTop: 'auto',
       }}
       copyright={`${currentYear} ${defaultMessage}`}
       links={[

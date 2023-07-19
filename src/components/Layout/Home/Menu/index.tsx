@@ -1,12 +1,7 @@
-import React from 'react'
+import React from 'react';
 
+const Menu: React.FC = () => {
+  return <>这是菜单栏</>;
+};
 
-const Menu:React.FC=()=>{
-
-    return <>
-        这是菜单栏
-    </>
-}
-
-
-export default Menu
+export default Menu;

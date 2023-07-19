@@ -1,4 +1,4 @@
-import Name from './Name'
+import Name from './Name';
 
-export default Name
-export * from './Name'
+export default Name;
+export * from './Name';

@@ -1,10 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const Position:React.FC =()=>{
+const Position: React.FC = () => {
+  return <>岗位设置</>;
+};
 
-    return <>
-        岗位设置
-    </>
-}
-
-export default Position
+export default Position;

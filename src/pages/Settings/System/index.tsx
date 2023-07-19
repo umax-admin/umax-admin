@@ -1,12 +1,7 @@
-import  React from 'react'
+import React from 'react';
 
+const System: React.FC = () => {
+  return <>系统设置</>;
+};
 
-const System:React.FC=()=>{
-
-    return <>
-        系统设置
-    </>
-}
-
-
-export  default System
+export default System;
