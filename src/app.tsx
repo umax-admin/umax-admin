@@ -32,7 +32,7 @@ export const layout: RunTimeLayoutConfig = ({
     waterMarkProps: {
       content: 'umax-admin',
     },
-    loading:true,
+    // loading:true,
     footerRender: () => <Footer />,
     childrenRender: (children) => {
       // if (initialState?.loading) return <PageLoading />;
@@ -44,6 +44,7 @@ export const layout: RunTimeLayoutConfig = ({
             disableUrlParams
             // collapse={true}
             enableDarkTheme
+
             hideCopyButton={true}
             hideHintAlert={true}
             settings={initialState?.settings}

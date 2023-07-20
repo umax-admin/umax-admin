@@ -7,16 +7,16 @@ const Settings: ProLayoutProps & {
   pwa?: boolean;
   logo?: string;
 } = {
-  navTheme: 'light',
+  navTheme: 'realDark',
   // 拂晓蓝
-  colorPrimary: '#1890ff',
+  // colorPrimary: '#1890ff',
   layout: 'mix',
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
   title: 'Umax Admin',
-  pwa: true,
+  // pwa: true,
   // logo: '/images/logo.png',
   // iconfontUrl: '/favicon.ico',
   token: {
