@@ -16,6 +16,11 @@ const dashboardRouter = [
         name:'用户分析页',
         path:'user',
         component:'Dashboard/User'
+    },
+    {
+        name:'位置分析页',
+        path:'map',
+        component:'Dashboard/UserMap'
     }
 ]
 

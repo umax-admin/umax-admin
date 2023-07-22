@@ -40,7 +40,7 @@ export const layout: RunTimeLayoutConfig = ({
     waterMarkProps: {
       content: 'umax-admin',
     },
-    disableContentMargin: false,
+    // disableContentMargin: false,
     // loading:true,
     footerRender: () => <Footer />,
     onPageChange: () => {
@@ -52,6 +52,9 @@ export const layout: RunTimeLayoutConfig = ({
       console.log(location.pathname)
     },
     menuHeaderRender: undefined,
+    token:{
+      bgLayout:'red'
+    },
     childrenRender: (children) => {
       // if (initialState?.loading) return <PageLoading />;
       return (
