@@ -11,11 +11,17 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "@ant-design/pro-components": "^2.6.4",
+    "@ant-design/icons": "^5.1.4",
+    "@ant-design/pro-components": "^2.6.7",
     "@ant-design/use-emotion-css": "^1.0.4",
     "@umijs/max": "^4.0.72",
-    "antd": "^5.7.0"
+    "antd": "^5.7.0",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "omit.js": "^2.0.2",
+    "rc-menu": "^9.11.0",
+    "rc-util": "^5.32.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",

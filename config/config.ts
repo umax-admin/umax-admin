@@ -1,6 +1,6 @@
 import { defineConfig } from '@umijs/max';
 import zhCN from 'antd/locale/zh_CN';
-
+import defaultSettings from './defaultSettings';
 import router from './router'
 export default defineConfig({
   antd: {
@@ -22,18 +22,26 @@ export default defineConfig({
   request: {},
   layout: {
     title: 'Umax',
+    locale: true,
+    ...defaultSettings,
   },
-  theme:{
-    primaryColor:'#25b864'
+  theme: {
+    // 如果不想要 configProvide 动态设置主题需要把这个设置为 default
+    // 只有设置为 variable， 才能使用 configProvide 动态设置主色调
+    'root-entry-name': 'variable',
   },
+  ignoreMomentLocale: true,
   routes:router,
+  fastRefresh: true,
   npmClient: 'yarn',
 
   analytics: {
     ga_v2: 'G-QTKV715HW0', // google analytics 的 key (GA 4)
   },
+
   // copy: ["README.md", "dist/"],
   metas: [{ name: 'description', content: '服务最好的闲鱼商铺' }],
-  // mountElementId: 'umax-admin',
+  mountElementId: 'umax-admin',
   // writeToDisk: true
+  // plugins.push(['umi-plugin-antd-theme', themePluginConfig])
 });

@@ -79,6 +79,7 @@ const router = [
     {
         name: '首页',
         path: '/home',
+        icon:'home',
         component: 'Home',
     },
 
@@ -92,12 +93,14 @@ const router = [
     {
         name: '仪表盘',
         path: '/dashboard',
+        icon:'dashboard',
         // component: 'Bank',
         routes: dashboardRouter
     },
     {
         name: '设置',
         path: '/settings',
+        icon:'setting',
         // component: 'Settings',
         routes: sysSettings
     },

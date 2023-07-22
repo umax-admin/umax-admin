@@ -7,17 +7,19 @@ const Settings: ProLayoutProps & {
   pwa?: boolean;
   logo?: string;
 } = {
-  navTheme: 'realDark',
+  // navTheme: 'realDark',
   // 拂晓蓝
-  // colorPrimary: '#1890ff',
-  // layout: 'mix',
-  // contentWidth: 'Fluid',
-  // fixedHeader: false,
-  // fixSiderbar: true,
-  // colorWeak: false,
+  colorPrimary: '#1890ff',
+  layout: 'mix',
+  contentWidth: 'Fluid',
+  fixedHeader: false,
+  fixSiderbar: true,
+  colorWeak: false,
+
+  pwa: true,
   title: 'Umax Admin',
   // pwa: true,
-  // logo: '/images/logo.png',
+  // logo: './images/logo.png',
   // iconfontUrl: '/favicon.ico',
   token: {
     // 参见ts声明，demo 见文档，通过token 修改样式
