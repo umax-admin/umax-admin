@@ -28,7 +28,7 @@ export const layout: RunTimeLayoutConfig = ({
 }) => {
 
   return {
-    actionsRender:() => [<>1</>,<>2</> ],
+    actionsRender:() => [<>消息</>,<>邮件</> ],
     waterMarkProps: {
       content: 'umax-admin',
     },
