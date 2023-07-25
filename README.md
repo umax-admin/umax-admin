@@ -22,15 +22,14 @@ umi g page foo
 # Write : src/pages/foo.tsx
 # Write : src/pages/foo.less
 ```
-#### 组件生成器
 
+#### 组件生成器
 
 ```bash
 umi g component
 
 
 ```
-
 
 #### 已目录方式生成页面
 
@@ -45,18 +44,19 @@ umi g component
 umi g api
 
 ```
-#### Mock 生成器
 
+#### Mock 生成器
 
 ```bash
 umi g mock acl
 ```
+
 ## 常用命令
 
 ```bash
  # 关闭 提交校验
   git commit --no-verify -m''
-  
+
   # 格式化代码
   yarn format
 ```
