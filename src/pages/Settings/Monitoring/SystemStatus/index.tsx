@@ -1,11 +1,14 @@
 import React from 'react';
 import {PageContainer,ProCard} from "@ant-design/pro-components";
 import RcResizeObserver from 'rc-resize-observer';
-import { Gauge } from '@ant-design/plots';
+import { Gauge,Line } from '@ant-design/plots';
 
-import {useState} from 'react'
+
+import {useState,useEffect} from 'react'
 const SystemStatus: React.FC = () => {
   const [percent,setPercent] = useState(0.25)
+  const [data, setData] = useState([]);
+
   const [responsive, setResponsive] = useState(false);
   const config = {
     percent: percent,
@@ -31,6 +34,29 @@ const SystemStatus: React.FC = () => {
       },
     },
   };
+
+
+  const asyncFetch = () => {
+    fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json')
+        .then((response) => response.json())
+        .then((json) => setData(json))
+        .catch((error) => {
+          console.log('fetch data failed', error);
+        });
+  };
+  const lineConfig = {
+    data,
+    padding: 'auto',
+    xField: 'Date',
+    yField: 'scales',
+    xAxis: {
+      // type: 'timeCat',
+      tickCount: 5,
+    },
+  };
+  useEffect(() => {
+    asyncFetch();
+  }, []);
   return <PageContainer>
     <RcResizeObserver
         key="resize-observer"
@@ -38,19 +64,35 @@ const SystemStatus: React.FC = () => {
           setResponsive(offset.width < 596);
         }}
     >
-
+      <ProCard title='平均负载'>
+      <Line  {...lineConfig} /></ProCard>
       <ProCard
           title="系统信息"
 
           split={responsive ? 'horizontal' : 'vertical'}
 
-          headerBordered
+           bordered
       >
-        <ProCard title="磁盘占用" colSpan="50%">
-          <Gauge {...config} />
+        <ProCard title="CPU" colSpan="50%"  bordered>
+          <Line  {...lineConfig} />
         </ProCard>
-        <ProCard title="内存占用" colSpan="50%">
-          <Gauge {...config} />
+        <ProCard title="内存" colSpan="50%"  bordered>
+          <Line  {...lineConfig} />
+        </ProCard>
+
+      </ProCard>
+      <ProCard
+          title="系统信息"
+
+          split={responsive ? 'horizontal' : 'vertical'}
+
+           bordered
+      >
+        <ProCard title="磁盘IO" colSpan="50%"  bordered>
+          <Line  {...lineConfig} />
+        </ProCard>
+        <ProCard title="网络IO" colSpan="50%"  bordered>
+          <Line  {...lineConfig} />
         </ProCard>
 
       </ProCard>
