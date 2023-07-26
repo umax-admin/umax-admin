@@ -26,25 +26,31 @@ const dashboardRouter = [
 
 const sysSettings =[
     {
-        name: '用户设置',
+        name: '用户管理',
 
         path: '/settings/user',
         component: 'Settings/User',
     },
     {
-        name: '角色设置',
+        name: '角色管理',
 
         path: '/settings/role',
         component: 'Settings/Role',
     },
     {
-        name: '岗位设置',
+        name: '岗位管理',
 
         path: '/settings/position',
         component: 'Settings/Position',
     },
     {
-        name: '系统设置',
+        name: '个人设置',
+
+        path: '/settings/person',
+        component: 'Settings/Person',
+    },
+    {
+        name: '系统管理',
 
         path: '/settings/system',
         component: 'Settings/System',
@@ -73,6 +79,8 @@ const sysSettings =[
         routes: developerRouter
     }
 ]
+
+
 
 const router = [
     //默认页面

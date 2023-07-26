@@ -2,11 +2,12 @@ import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
 import type { RunTimeLayoutConfig } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
-import {SettingOutlined,BellOutlined} from '@ant-design/icons'
+import {SettingOutlined,BellOutlined,WindowsOutlined,CommentOutlined,PlusOutlined} from '@ant-design/icons'
 import  {AvatarDropdown, AvatarName } from '@/components';
 import {useState,useEffect} from 'react'
 import { history } from '@umijs/max';
 import {Footer} from "@/components/Layout/Home";
+import {FloatButton} from 'antd'
 
 import dayjs from "dayjs";
 // const isDev = process.env.NODE_ENV === 'development';
@@ -72,7 +73,17 @@ export const layout: RunTimeLayoutConfig = ({
       return (
         <>
           {children}
+          <FloatButton.Group
+              trigger="click"
+              type="primary"
+              style={{ right: 24 }}
+              icon={<WindowsOutlined />}
+          >
 
+            <FloatButton icon={<PlusOutlined />} />
+            <FloatButton />
+            <FloatButton icon={<CommentOutlined />} />
+          </FloatButton.Group>
           <SettingDrawer
 
               disableUrlParams
