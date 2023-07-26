@@ -44,6 +44,12 @@ const sysSettings =[
         component: 'Settings/Position',
     },
     {
+        name: '菜单管理',
+
+        path: '/settings/menus',
+        component: 'Settings/Menus',
+    },
+    {
         name: '个人设置',
 
         path: '/settings/person',
