@@ -6,6 +6,9 @@ import { Layout, Statistic } from 'antd';
 
 import { Footer, Header } from '@/components/Layout/Home';
 const { Divider } = ProCard;
+import CountUp from 'react-countup';
+const formatter = (value: number) => <CountUp end={value} separator="," />;
+
 
 const Index: React.FC = () => {
   const [responsive, setResponsive] = useState(false);
@@ -27,7 +30,7 @@ const Index: React.FC = () => {
               direction={responsive ? 'column' : 'row'}
             >
               <ProCard>
-                <Statistic title="今日UV" value={79.0} precision={2} />
+                <Statistic title="今日UV" value={79.0} precision={2} formatter={formatter} />
               </ProCard>
               <Divider type={responsive ? 'horizontal' : 'vertical'} />
               <ProCard>
@@ -35,6 +38,7 @@ const Index: React.FC = () => {
                   title="平均访问时间"
                   value={112893.0}
                   precision={2}
+                  formatter={formatter}
                 />
               </ProCard>
               <Divider type={responsive ? 'horizontal' : 'vertical'} />
@@ -43,7 +47,7 @@ const Index: React.FC = () => {
               </ProCard>
               <Divider type={responsive ? 'horizontal' : 'vertical'} />
               <ProCard>
-                <Statistic title="总统计" value={112893.0} />
+                <Statistic title="总统计" value={112893.0} formatter={formatter} />
               </ProCard>
             </ProCard.Group>
           </PageContainer>

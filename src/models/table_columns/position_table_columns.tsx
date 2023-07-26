@@ -1,15 +1,21 @@
-const rule_table_columns = [
+const position_table_columns =
+ [
     {
-        title:'角色ID',
+        title:'岗位ID',
 
         copyable:true,
-        dataIndex:'role_id'
+        dataIndex:'position_id'
     },
     {
-        title:'角色名称',
+        title:'岗位名称',
         copyable:true,
-        dataIndex:'role_name'
+        dataIndex:'position_name'
     },
+     {
+       title:'岗位负责人',
+       dataIndex: 'position_master',
+         copyable:true,
+     },
     {
         title:'创建时间',
         copyable:true,
@@ -27,4 +33,4 @@ const rule_table_columns = [
     }
 ]
 
-export default rule_table_columns
+export default position_table_columns

@@ -24,7 +24,8 @@
     "moment": "^2.29.4",
     "omit.js": "^2.0.2",
     "rc-menu": "^9.11.0",
-    "rc-util": "^5.32.2"
+    "rc-util": "^5.32.2",
+    "react-countup": "^6.4.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",

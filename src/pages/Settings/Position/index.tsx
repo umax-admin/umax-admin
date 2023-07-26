@@ -1,8 +1,15 @@
 import React from 'react';
-import {PageContainer} from "@ant-design/pro-components";
+import {PageContainer, ProTable} from "@ant-design/pro-components";
+import position_table_columns from "@/models/table_columns/position_table_columns";
 
 const Position: React.FC = () => {
-  return <PageContainer>岗位设置</PageContainer>;
+  return <PageContainer>
+    <ProTable
+        columns={position_table_columns}
+    >
+
+    </ProTable>
+  </PageContainer>;
 };
 
 export default Position;
