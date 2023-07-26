@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { PageContainer, ProCard, WaterMark } from '@ant-design/pro-components';
 
@@ -7,14 +7,25 @@ import { Layout, Statistic } from 'antd';
 import { Footer, Header } from '@/components/Layout/Home';
 const { Divider } = ProCard;
 import CountUp from 'react-countup';
+import dayjs from "dayjs";
 const formatter = (value: number) => <CountUp end={value} separator="," />;
 
 
 const Index: React.FC = () => {
   const [responsive, setResponsive] = useState(false);
+  const [timeNow,setTimeNow] = useState('')
 
+  useEffect(()=>{
+    const t =   setInterval(()=>{
+      setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '))
+
+    },1000)
+    return ()=>{
+      clearTimeout(t)
+    }
+  },[])
   return (
-    <WaterMark content="umax-admin" style={{}}>
+    <WaterMark content={['    umax-admin',timeNow]} style={{}}>
       <Layout
         style={{
           display: 'flex',

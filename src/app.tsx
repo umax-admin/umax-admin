@@ -7,6 +7,8 @@ import  {AvatarDropdown, AvatarName } from '@/components';
 import {useState,useEffect} from 'react'
 import { history } from '@umijs/max';
 import {Footer} from "@/components/Layout/Home";
+
+import dayjs from "dayjs";
 // const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/login';
 export async function getInitialState(): Promise<{
@@ -29,6 +31,16 @@ export const layout: RunTimeLayoutConfig = ({
   setInitialState,
 }) => {
 
+  const [timeNow,setTimeNow] = useState('')
+  useEffect(()=>{
+    const t =   setInterval(()=>{
+      setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '))
+
+    },1000)
+    return ()=>{
+      clearTimeout(t)
+    }
+  },[])
   return {
     actionsRender:() => [<BellOutlined />,<>邮件</>],
     avatarProps: {
@@ -38,7 +50,7 @@ export const layout: RunTimeLayoutConfig = ({
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       }},
     waterMarkProps: {
-      content: 'umax-admin',
+      content: ['      umax-admin ',timeNow] ,
     },
     // disableContentMargin: false,
     // loading:true,
