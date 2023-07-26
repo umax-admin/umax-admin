@@ -5,7 +5,10 @@ import React, { useState, useRef, useLayoutEffect } from 'react';
 
 import {Button, Menu} from 'antd';
 import styles from './style.less';
-
+import BaseView from './components/base';
+import SecurityView from './components/security';
+import BindingView from './components/binding';
+import NotificationView from './components/notification';
 const { Item } = Menu;
 import { GridContent, } from '@ant-design/pro-layout';
 const Person:React.FC =()=>{
@@ -21,6 +24,7 @@ const Person:React.FC =()=>{
         security: '安全设置',
         binding: '账号绑定',
         notification: '新消息通知',
+        system: '系统设置',
     };
 
 
@@ -61,13 +65,15 @@ const Person:React.FC =()=>{
         const { selectKey } = initConfig;
         switch (selectKey) {
             case 'base':
-                return <Button />;
+                return <BaseView />;
             case 'security':
-                return <Button />;
+                return <SecurityView />;
             case 'binding':
-                return <Button />;
+                return <BindingView />;
             case 'notification':
-                return <Button />;
+                return <NotificationView />;
+            case 'system':
+                return <NotificationView />;
             default:
                 return null;
         }
