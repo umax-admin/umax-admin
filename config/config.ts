@@ -40,7 +40,7 @@ export default defineConfig({
   },
 
   // copy: ["README.md", "dist/"],
-  metas: [{ name: 'description', content: '服务最好的闲鱼商铺' }],
+  metas: [{ name: 'description', content: '最好的后台管理' }],
   mountElementId: 'umax-admin',
   // writeToDisk: true
   // plugins.push(['umi-plugin-antd-theme', themePluginConfig])

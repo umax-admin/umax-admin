@@ -14,17 +14,26 @@ import dayjs from "dayjs";
 const loginPath = '/login';
 export async function getInitialState(): Promise<{
   settings?: Partial<LayoutSettings>;
+  use_name?:string;
+  avatar?:string;
 }> {
   // 如果不是登录页面，执行
   const { location } = history;
   if (location.pathname !== loginPath) {
     return {
       settings: defaultSettings as Partial<LayoutSettings>,
+      avatar:'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+      user_name:'umax-admin'
     };
   }
+  // 获取用户信息
+
+
   return {
     // fetchUserInfo,
     settings: defaultSettings as Partial<LayoutSettings>,
+    avatar:'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+    user_name:'umax-admin'
   };
 }
 export const layout: RunTimeLayoutConfig = ({
@@ -33,15 +42,15 @@ export const layout: RunTimeLayoutConfig = ({
 }) => {
 
   const [timeNow,setTimeNow] = useState('')
-  useEffect(()=>{
-    const t =   setInterval(()=>{
-      setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '))
-
-    },1000)
-    return ()=>{
-      clearTimeout(t)
-    }
-  },[])
+  // useEffect(()=>{
+  //   const t =   setInterval(()=>{
+  //     setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '))
+  //
+  //   },1000)
+  //   return ()=>{
+  //     clearTimeout(t)
+  //   }
+  // },[])
   return {
     actionsRender:() => [<BellOutlined />,<>邮件</>],
     avatarProps: {
@@ -51,7 +60,7 @@ export const layout: RunTimeLayoutConfig = ({
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       }},
     waterMarkProps: {
-      content: ['      umax-admin ',timeNow] ,
+      content: initialState?.user_name ,
     },
     // disableContentMargin: false,
     // loading:true,
