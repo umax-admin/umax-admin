@@ -61,6 +61,12 @@ const sysSettings =[
         path: '/settings/system',
         component: 'Settings/System',
     },
+    // {
+    //     name: '字典管理',
+    //
+    //     path: '/settings/dictionary',
+    //     component: 'Settings/Dictionary',
+    // },
 
     {
         name:'系统监控',
@@ -76,6 +82,16 @@ const sysSettings =[
                 name:'在线用户',
                 path:'user',
                 component:'Settings/Monitoring/User'
+            },
+            {
+                name:'登录日志',
+                path:'login_log',
+                component:'Settings/Monitoring/LoginLog'
+            },
+            {
+                name:'操作日志',
+                path:'operaction_log',
+                component:'Settings/Monitoring/Operation'
             }
         ]
     },

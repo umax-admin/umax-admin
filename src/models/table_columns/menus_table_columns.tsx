@@ -11,13 +11,23 @@ const menus_table_columns = [
         dataIndex:'menu_name'
     },
     {
-        title:'菜单创建人',
-        dataIndex: 'menu_master',
+        title:'路径',
+        dataIndex: 'menu_path',
+        copyable:true,
+    },
+    {
+        title:'页面',
+        dataIndex: 'menu_component',
         copyable:true,
     },
 
     {
-        title:'状态',
+        title:'是否隐藏',
+        copyable:true,
+        dataIndex:'status'
+    },
+    {
+        title:'排序',
         copyable:true,
         dataIndex:'status'
     },
