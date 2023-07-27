@@ -52,7 +52,7 @@ export const layout: RunTimeLayoutConfig = ({
   //   }
   // },[])
   return {
-    actionsRender:() => [<BellOutlined />,<>邮件</>],
+    actionsRender:() => [<BellOutlined />],
     avatarProps: {
       src:'',
       title: <AvatarName />,
