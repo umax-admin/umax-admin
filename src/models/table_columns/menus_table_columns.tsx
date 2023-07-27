@@ -29,7 +29,7 @@ const menus_table_columns = [
   {
     title: '排序',
     copyable: true,
-    dataIndex: 'status',
+    dataIndex: 'orders',
   },
   {
     title: '创建时间',
