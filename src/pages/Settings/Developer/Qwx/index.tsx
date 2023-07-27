@@ -1,11 +1,8 @@
-import React from 'react'
-import {PageContainer} from "@ant-design/pro-components";
+import { PageContainer } from '@ant-design/pro-components';
+import React from 'react';
 
+const Qwx: React.FC = () => {
+  <PageContainer>企业微信配置</PageContainer>;
+};
 
-const Qwx:React.FC = ()=>{
-    <PageContainer>
-        企业微信配置
-    </PageContainer>
-}
-
-export default Qwx
+export default Qwx;

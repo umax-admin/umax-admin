@@ -1,16 +1,14 @@
-import  React from 'react'
+import React from 'react';
 
-import {PageContainer,ProCard,ProTable} from "@ant-design/pro-components";
-import login_log_columns from "@/models/table_columns/login_log_columns";
+import login_log_columns from '@/models/table_columns/login_log_columns';
+import { PageContainer, ProTable } from '@ant-design/pro-components';
 
-const LoginLog:React.FC =()=>{
-
-    return <PageContainer>
-
-        <ProTable
-            columns={login_log_columns}
-        ></ProTable>
+const LoginLog: React.FC = () => {
+  return (
+    <PageContainer>
+      <ProTable columns={login_log_columns}></ProTable>
     </PageContainer>
-}
+  );
+};
 
-export default LoginLog
+export default LoginLog;

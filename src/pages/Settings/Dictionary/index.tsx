@@ -1,16 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import {PageContainer, ProTable} from "@ant-design/pro-components";
+import { PageContainer, ProTable } from '@ant-design/pro-components';
 
-
-const Dictionary:React.FC = ()=>{
-
-    return <PageContainer>
-
-        <ProTable>
-
-        </ProTable>
+const Dictionary: React.FC = () => {
+  return (
+    <PageContainer>
+      <ProTable></ProTable>
     </PageContainer>
-}
+  );
+};
 
-export default Dictionary
+export default Dictionary;

@@ -1,31 +1,29 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { PageContainer, ProCard, WaterMark } from '@ant-design/pro-components';
 
 import { Layout, Statistic } from 'antd';
 
 import { Footer, Header } from '@/components/Layout/Home';
-const { Divider } = ProCard;
+import dayjs from 'dayjs';
 import CountUp from 'react-countup';
-import dayjs from "dayjs";
+const { Divider } = ProCard;
 const formatter = (value: number) => <CountUp end={value} separator="," />;
-
 
 const Index: React.FC = () => {
   const [responsive, setResponsive] = useState(false);
-  const [timeNow,setTimeNow] = useState('')
+  const [timeNow, setTimeNow] = useState('');
 
-  useEffect(()=>{
-    const t =   setInterval(()=>{
-      setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '))
-
-    },1000)
-    return ()=>{
-      clearTimeout(t)
-    }
-  },[])
+  useEffect(() => {
+    const t = setInterval(() => {
+      setTimeNow(dayjs().format(' YYYY-MM-DD	  HH:mm:ss  '));
+    }, 1000);
+    return () => {
+      clearTimeout(t);
+    };
+  }, []);
   return (
-    <WaterMark content={['    umax-admin',timeNow]} style={{}}>
+    <WaterMark content={['    umax-admin', timeNow]} style={{}}>
       <Layout
         style={{
           display: 'flex',
@@ -41,7 +39,12 @@ const Index: React.FC = () => {
               direction={responsive ? 'column' : 'row'}
             >
               <ProCard>
-                <Statistic title="今日UV" value={79.0} precision={2} formatter={formatter} />
+                <Statistic
+                  title="今日UV"
+                  value={79.0}
+                  precision={2}
+                  formatter={formatter}
+                />
               </ProCard>
               <Divider type={responsive ? 'horizontal' : 'vertical'} />
               <ProCard>
@@ -58,7 +61,11 @@ const Index: React.FC = () => {
               </ProCard>
               <Divider type={responsive ? 'horizontal' : 'vertical'} />
               <ProCard>
-                <Statistic title="总统计" value={112893.0} formatter={formatter} />
+                <Statistic
+                  title="总统计"
+                  value={112893.0}
+                  formatter={formatter}
+                />
               </ProCard>
             </ProCard.Group>
           </PageContainer>

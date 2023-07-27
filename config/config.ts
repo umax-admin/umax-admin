@@ -1,7 +1,7 @@
 import { defineConfig } from '@umijs/max';
 import zhCN from 'antd/locale/zh_CN';
 import defaultSettings from './defaultSettings';
-import router from './router'
+import router from './router';
 export default defineConfig({
   antd: {
     configProvider: {
@@ -31,7 +31,7 @@ export default defineConfig({
     'root-entry-name': 'variable',
   },
   ignoreMomentLocale: true,
-  routes:router,
+  routes: router,
   fastRefresh: true,
   npmClient: 'yarn',
 
