@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { PageContainer, ProCard, WaterMark } from '@ant-design/pro-components';
 
 import { Layout, Statistic } from 'antd';
+import { Canvas } from '@react-three/fiber'
 
 import { Footer, Header } from '@/components/Layout/Home';
 import dayjs from 'dayjs';
@@ -68,6 +69,9 @@ const Index: React.FC = () => {
                 />
               </ProCard>
             </ProCard.Group>
+            <Canvas>
+            <mesh />
+              </Canvas>
           </PageContainer>
         </Layout.Content>
         <Layout.Footer>
