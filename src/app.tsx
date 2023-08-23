@@ -34,7 +34,7 @@ export async function getInitialState(): Promise<{
   // 获取用户信息
 
   return {
-    // fetchUserInfo,
+    // fetchUserInfo 获取用户信息
     settings: defaultSettings as Partial<LayoutSettings>,
     avatar:
       'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
