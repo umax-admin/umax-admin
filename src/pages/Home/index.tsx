@@ -1,7 +1,72 @@
-import { PageContainer } from '@ant-design/pro-components';
+import { PageContainer,ProCard } from '@ant-design/pro-components';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useRef, useState } from 'react' 
+import { Line } from '@ant-design/charts';
+import { Column } from '@ant-design/plots';
+const data = [
+  {
+    type: '家具家电',
+    sales: 38,
+  },
+  {
+    type: '粮油副食',
+    sales: 52,
+  },
+  {
+    type: '生鲜水果',
+    sales: 61,
+  },
+  {
+    type: '美容洗护',
+    sales: 145,
+  },
+  {
+    type: '母婴用品',
+    sales: 48,
+  },
+  {
+    type: '进口食品',
+    sales: 38,
+  },
+  {
+    type: '食品饮料',
+    sales: 38,
+  },
+  {
+    type: '家庭清洁',
+    sales: 38,
+  },
+];
+const config = {
+  data,
+  xField: 'type',
+  yField: 'sales',
+  label: {
+    // 可手动配置 label 数据标签位置
+    position: 'middle',
+    // 'top', 'bottom', 'middle',
+    // 配置样式
+    style: {
+      fill: '#FFFFFF',
+      opacity: 0.6,
+    },
+  },
+  xAxis: {
+    label: {
+      autoHide: true,
+      autoRotate: false,
+    },
+  },
+  meta: {
+    type: {
+      alias: '类别',
+    },
+    sales: {
+      alias: '销售额',
+    },
+  },
+};
 function Box(props) {
   // This reference gives us direct access to the THREE.Mesh object
   const ref = useRef()
@@ -26,16 +91,30 @@ function Box(props) {
 }
 const HomePage: React.FC = () => {
   return <PageContainer ghost>
-  
-  <Canvas>
-      <ambientLight intensity={0.5} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <pointLight position={[-10, -10, -10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-      <OrbitControls />
-    </Canvas>
-  
+ <ProCard gutter={16} style={{ marginBlockStart: 16 }}>
+    <ProCard bordered title="总销售额">Auto</ProCard>
+    <ProCard title="订单量" bordered>Auto</ProCard>
+    <ProCard title="总金额" bordered>Auto</ProCard>
+  </ProCard>
+   
+
+  <div>
+    <ProCard>
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+        <pointLight position={[-10, -10, -10]} />
+        <Box position={[-1.2, 0, 0]} />
+        <Box position={[1.2, 0, 0]} />
+        <OrbitControls />
+      </Canvas>
+    </ProCard>
+  </div>
+  <div>
+    <ProCard title="销售类型">
+    <Column {...config} />
+      </ProCard> 
+  </div>
   </PageContainer>;
 };
 
