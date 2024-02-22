@@ -14,6 +14,16 @@ const Header: React.FC = () => {
       key: 'home',
       icon: <HomeOutlined />,
     },
+    {
+      label: '博客',
+      key: 'blog',
+      icon: <HomeOutlined />,
+    },
+    {
+      label: '大屏',
+      key: 'big_screen',
+      icon: <HomeOutlined />,
+    },
   ];
   const onClick: MenuProps['onClick'] = (e) => {
     console.log('click ', e);

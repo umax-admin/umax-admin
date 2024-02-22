@@ -5,7 +5,7 @@ import { PageContainer, ProTable } from '@ant-design/pro-components';
 const Dictionary: React.FC = () => {
   return (
     <PageContainer>
-      <ProTable></ProTable>
+        字典
     </PageContainer>
   );
 };

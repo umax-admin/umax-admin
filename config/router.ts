@@ -73,6 +73,12 @@ const sysSettings = [
     path: '/settings/monitoring',
     routes: [
       {
+        name: '系统信息',
+
+        path: '/settings/monitoring/system_info',
+        component: 'Settings/Monitoring/SystemInfo',
+      },
+      {
         name: '系统状态',
 
         path: '/settings/monitoring/system_status',
